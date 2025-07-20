@@ -1,0 +1,127 @@
+
+2.2 Install Script for Website¶
+Automatic Installation (Recommended):
+
+In the dashboard, find the "Script Installation" section
+Click "Auto Install Script"
+Select "Install on all login pages" for complete installation
+Click "Confirm Installation"
+Auto Install Script
+
+Manual Installation (Advanced):
+
+If you need manual installation, see Detailed Installation Guide.
+
+
+Chỗ này không đúng, cần sửa lại. Tại trang dashboard, nhấn nút Install the script to this site.
+Nếu bạn muốn install ở multi store channel khác thì nhớ chọn channel sites trong drop down box kế bên.
+Một script mới, Papa Social Login by PapaThemes sẽ được install vào Script Manager của Store Channel hiện tại.
+
+---
+
+sửa Go to the login page (yourstore.com/login) thành yourstore.com/login.php
+
+
+---
+
+Configure SMTP server (or use default)
+
+Không có default SMTP server, nếu bạn bật xác nhận bằng OTP code, bạn cần phải cấu hình nhập vào SMTP server của bạn.
+
+
+----
+
+Developer information: Papa Team
+
+sửa thành PapaThemes.
+
+----
+
+
+Wait for the installation process to complete (usually takes 1-2 minutes)
+
+
+chỉ đợi vài giây.
+
+----
+
+
+đơn giản hóa phần sau, chỉ cần hướng dẫn nhất nút Install the script to this site, như trên:
+
+Script Installation¶
+After installing the application, you need to install the script to display login buttons on your website.
+
+Method 1: Automatic (Recommended)¶
+Papa Social Login supports automatic script installation:
+
+Open Papa Social Login dashboard
+Go to "Installation" tab
+Click "Auto Install Script"
+Choose appropriate option:
+Auto Install Options
+
+Installation options:
+
+Install on login page only: Only install on login page
+Install on checkout page only: Only install on checkout page
+Install on all pages: Install on all login/checkout pages
+Custom installation: Customize installation location
+Method 2: Manual¶
+If auto install doesn't work or you want detailed control:
+
+Step 1: Get Script Code¶
+In Papa Social Login dashboard
+Go to "Installation" → "Manual Installation"
+Copy the provided script:
+
+<script>
+  (function() {
+    var script = document.createElement('script');
+    script.src = 'https://app.papasociallogin.com/scripts/social-login.js';
+    script.setAttribute('data-store-hash', 'YOUR_STORE_HASH');
+    script.setAttribute('data-channel-id', 'YOUR_CHANNEL_ID');
+    document.head.appendChild(script);
+  })();
+</script>
+Step 2: Insert Script into Theme¶
+Method 1: Template Editing (Recommended)
+
+In BigCommerce Admin, go to Storefront → Script Manager
+Click "Create a Script"
+Fill in the information:
+Name: Papa Social Login
+Description: Social login buttons
+Location: Footer
+Select pages: Login page, Checkout page
+Script category: Essential
+Script type: Script
+Script Manager
+
+Paste the script code into Script contents section
+Click "Save"
+Method 2: Direct Theme Editing
+
+Warning
+
+This method requires HTML/CSS knowledge. Always backup your theme before editing.
+
+Go to Storefront → My Themes
+Click "Advanced" → "Edit Theme Files"
+Find the file templates/pages/auth/login.html
+Add the script at the end of the file, before the </body> tag
+Save changes
+
+----
+
+Blueprint	⚠️	Requires manual installation
+
+bỏ không support Blueprint.
+
+---
+
+Bỏ hết những hướng dẫn nào bạn không chắc chắn là đúng đi.
+
+---
+
+Hướng dẫn sử dụng làm sao đơn giản nhất, chỉ giữ những thông tin cần thiết thôi.
+Kiểm tra và check cẩn thận lại tất cả các file hướng dẫn.
